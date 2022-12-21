@@ -3,13 +3,8 @@ import {
   StatisticsItem,
   StatisticsList,
 } from 'components/Statistics/Statistics.styled';
-export const Statistics = ({
-  good,
-  neutral,
-  bad,
-  total,
-  positivePercentage,
-}) => {
+
+export const Statistics = ({ good, neutral, bad, total, positive }) => {
   return (
     <>
       <StatisticsList>
@@ -34,7 +29,7 @@ export const Statistics = ({
         </StatisticsItem>
         <StatisticsItem>
           <span> Positive feedback:</span>
-          <span>{positivePercentage}%</span>
+          <span>{positive}%</span>
         </StatisticsItem>
       </StatisticsList>
     </>
@@ -46,5 +41,5 @@ Statistics.propTypes = {
   neutral: PropTypes.number.isRequired,
   bad: PropTypes.number.isRequired,
   total: PropTypes.number.isRequired,
-  positivePercentage: PropTypes.number.isRequired,
+  positive: PropTypes.number.isRequired,
 };
